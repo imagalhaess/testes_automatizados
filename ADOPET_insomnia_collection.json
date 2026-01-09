@@ -1,0 +1,369 @@
+{
+	"_type": "export",
+	"__export_format": 4,
+	"__export_date": "2025-01-09T00:00:00.000Z",
+	"__export_source": "insomnia.desktop.app",
+	"resources": [
+		{
+			"_id": "wrk_adopet",
+			"parentId": null,
+			"modified": 1704758400000,
+			"created": 1704758400000,
+			"name": "ADOPET",
+			"description": "",
+			"scope": "collection",
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_base",
+			"parentId": "wrk_adopet",
+			"modified": 1704758400000,
+			"created": 1704758400000,
+			"name": "Base Environment",
+			"data": {
+				"base_url": "http://localhost:8080"
+			},
+			"dataPropertyOrder": {
+				"&": ["base_url"]
+			},
+			"color": null,
+			"isPrivate": false,
+			"metaSortKey": 1704758400000,
+			"_type": "environment"
+		},
+		{
+			"_id": "fld_abrigo",
+			"parentId": "wrk_adopet",
+			"modified": 1704758400000,
+			"created": 1704758400000,
+			"name": "ABRIGO",
+			"description": "",
+			"environment": {},
+			"environmentPropertyOrder": null,
+			"metaSortKey": -1704758400000,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_adocao",
+			"parentId": "wrk_adopet",
+			"modified": 1704758400000,
+			"created": 1704758400000,
+			"name": "ADOCAO",
+			"description": "",
+			"environment": {},
+			"environmentPropertyOrder": null,
+			"metaSortKey": -1704758300000,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_pet",
+			"parentId": "wrk_adopet",
+			"modified": 1704758400000,
+			"created": 1704758400000,
+			"name": "PET",
+			"description": "",
+			"environment": {},
+			"environmentPropertyOrder": null,
+			"metaSortKey": -1704758200000,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_tutor",
+			"parentId": "wrk_adopet",
+			"modified": 1704758400000,
+			"created": 1704758400000,
+			"name": "TUTOR",
+			"description": "",
+			"environment": {},
+			"environmentPropertyOrder": null,
+			"metaSortKey": -1704758100000,
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_listar_abrigos",
+			"parentId": "fld_abrigo",
+			"modified": 1704758400000,
+			"created": 1704758400000,
+			"url": "{{ _.base_url }}/abrigos",
+			"name": "Listar abrigos",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1704758400000,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"_type": "request"
+		},
+		{
+			"_id": "req_cadastrar_abrigo",
+			"parentId": "fld_abrigo",
+			"modified": 1704758400000,
+			"created": 1704758400000,
+			"url": "{{ _.base_url }}/abrigos",
+			"name": "Cadastrar abrigo",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n    \"nome\": \"Abrigo xpto\",\n    \"telefone\": \"61977777777\",\n    \"email\": \"abrigoxpto@email.com.br\"\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1704758300000,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"_type": "request"
+		},
+		{
+			"_id": "req_listar_pets_abrigo",
+			"parentId": "fld_abrigo",
+			"modified": 1704758400000,
+			"created": 1704758400000,
+			"url": "{{ _.base_url }}/abrigos/1/pets",
+			"name": "Listar pets do abrigo",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1704758200000,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"_type": "request"
+		},
+		{
+			"_id": "req_cadastrar_pet_abrigo",
+			"parentId": "fld_abrigo",
+			"modified": 1704758400000,
+			"created": 1704758400000,
+			"url": "{{ _.base_url }}/abrigos/2/pets",
+			"name": "Cadastrar pet do abrigo",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n    \"tipo\": \"CACHORRO\",\n    \"nome\": \"bidu\",\n    \"raca\": \"SRD\",\n    \"idade\": 5,\n    \"cor\": \"preto\",\n    \"peso\": 5.45\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1704758100000,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"_type": "request"
+		},
+		{
+			"_id": "req_solicitar_adocao",
+			"parentId": "fld_adocao",
+			"modified": 1704758400000,
+			"created": 1704758400000,
+			"url": "{{ _.base_url }}/adocoes",
+			"name": "Solicitar adocao",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n    \"idPet\": 1,\n    \"idTutor\": 1,\n    \"motivo\": \"Motivo qualquer\"\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1704758400000,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"_type": "request"
+		},
+		{
+			"_id": "req_aprovar_adocao",
+			"parentId": "fld_adocao",
+			"modified": 1704758400000,
+			"created": 1704758400000,
+			"url": "{{ _.base_url }}/adocoes/aprovar",
+			"name": "Aprovar adocao",
+			"description": "",
+			"method": "PUT",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n    \"idAdocao\": 1\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1704758300000,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"_type": "request"
+		},
+		{
+			"_id": "req_reprovar_adocao",
+			"parentId": "fld_adocao",
+			"modified": 1704758400000,
+			"created": 1704758400000,
+			"url": "{{ _.base_url }}/adocoes/reprovar",
+			"name": "Reprovar adocao",
+			"description": "",
+			"method": "PUT",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n    \"idAdocao\": 1,\n    \"justificativa\": \"Justificativa qualquer\"\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1704758200000,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"_type": "request"
+		},
+		{
+			"_id": "req_listar_pets",
+			"parentId": "fld_pet",
+			"modified": 1704758400000,
+			"created": 1704758400000,
+			"url": "{{ _.base_url }}/pets",
+			"name": "Listar pets disponiveis",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1704758400000,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"_type": "request"
+		},
+		{
+			"_id": "req_cadastrar_tutor",
+			"parentId": "fld_tutor",
+			"modified": 1704758400000,
+			"created": 1704758400000,
+			"url": "{{ _.base_url }}/tutores",
+			"name": "Cadastrar tutor",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n    \"nome\": \"Fulano da Silva\",\n    \"telefone\": \"61900000000\",\n    \"email\": \"fulano@email.com.br\"\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1704758400000,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"_type": "request"
+		},
+		{
+			"_id": "req_atualizar_tutor",
+			"parentId": "fld_tutor",
+			"modified": 1704758400000,
+			"created": 1704758400000,
+			"url": "{{ _.base_url }}/tutores",
+			"name": "Atualizar tutor",
+			"description": "",
+			"method": "PUT",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n    \"id\": 1,\n    \"nome\": \"Fulano da Silva 2\",\n    \"telefone\": \"61900000001\",\n    \"email\": \"fulano2@email.com.br\"\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1704758300000,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"_type": "request"
+		}
+	]
+}
